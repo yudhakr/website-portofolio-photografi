@@ -1,0 +1,161 @@
+.about__intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(30px, 5vw, 80px);
+  align-items: center;
+  padding-top: clamp(40px, 6vw, 80px);
+}
+.about__portrait {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface);
+}
+.about__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about__title {
+  font-size: clamp(2rem, 4.6vw, 4rem);
+  line-height: 1.02;
+  margin: 16px 0 20px;
+  max-width: 16ch;
+}
+.about__sub {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  max-width: 40ch;
+}
+
+.about__label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about__story {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: clamp(24px, 4vw, 60px);
+}
+.about__prose p {
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+.about__prose em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* Clients */
+.about__clients {
+  padding-block: clamp(30px, 4vw, 50px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.about__clients .eyebrow {
+  display: block;
+  margin-bottom: 26px;
+}
+.about__logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+}
+.about__logo {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  letter-spacing: 0.14em;
+  color: var(--text-faint);
+  transition: color 0.4s var(--ease);
+}
+.about__logo:hover {
+  color: var(--text);
+}
+
+/* Philosophy */
+.about__phil {
+  padding-block: clamp(70px, 12vw, 160px);
+  text-align: center;
+}
+.about__quote {
+  font-size: clamp(1.8rem, 5vw, 4rem);
+  line-height: 1.1;
+  max-width: 22ch;
+  margin: 0 auto;
+  font-style: italic;
+}
+.about__cite {
+  display: block;
+  margin-top: 28px;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-style: normal;
+}
+
+/* Awards + gear */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+}
+.about__awardlist {
+  list-style: none;
+}
+.about__awardlist li {
+  display: flex;
+  gap: 22px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.98rem;
+  color: var(--text-dim);
+}
+.about__awardyear {
+  color: var(--text);
+  min-width: 52px;
+  font-variant-numeric: tabular-nums;
+}
+
+.about__gearcols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 40px;
+}
+.about__gearcol h4 {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.about__gearcol ul {
+  list-style: none;
+}
+.about__gearcol li {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  padding-block: 5px;
+}
+
+@media (max-width: 900px) {
+  .about__intro,
+  .about__story,
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__story .about__label {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 520px) {
+  .about__gearcols {
+    grid-template-columns: 1fr;
+  }
+}

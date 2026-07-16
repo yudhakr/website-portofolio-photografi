@@ -1,0 +1,33 @@
+.pimg {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: var(--surface);
+}
+
+.pimg__blur,
+.pimg__full {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pimg__blur {
+  transform: scale(1.1);
+  filter: saturate(1.05);
+  transition: opacity 0.8s var(--ease);
+}
+
+.pimg__full {
+  opacity: 0;
+  transition: opacity 0.9s var(--ease), transform 1.2s var(--ease);
+}
+
+.pimg.is-loaded .pimg__full {
+  opacity: 1;
+}
+.pimg.is-loaded .pimg__blur {
+  opacity: 0;
+}
